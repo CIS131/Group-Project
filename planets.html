@@ -20,6 +20,12 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<style>
+		.padding-planets {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+	</style>
   </head>
   <body style="background-color: black;">
     <div class="container-fluid text-center">
@@ -36,8 +42,39 @@
 			  <area shape="circle" coords="1685,596,41" href="#neptune" alt="Neptune">
 			</map>
 	</div>
+	<!-- Navbar -->
+	       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav-main">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galaxies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sounds/Frequencies</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="planets.html">Our Planets</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Computers in Space</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+	<!-- Article Body -->
 	<div class="container">
-		<div class="row" id="mercury">
+		<div class="row  padding-planets" id="mercury">
 			<div class="col-md-6">
 				<img src="images/mercury.jpg" class="img-responsive" style="width:100%" alt="Mercury">
 			</div>
@@ -54,7 +91,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="row" id="venus">
+		<div class="row  padding-planets" id="venus">
 			<div class="col-md-6">
 				<h2 style="color: ivory;">Venus</h2>
 				<p style="color: ivory;">Diameter:	12,104 km<br>
@@ -71,7 +108,7 @@
 				<img src="images/venus.jpg" class="img-responsive" style="width:100%" alt="Venus">
 			</div>
 		</div>
-		<div class="row" id="earth">
+		<div class="row  padding-planets" id="earth">
 			<div class="col-md-6">
 				<img src="images/earth.png" class="img-responsive" style="width:100%" alt="Earth">
 			</div>
@@ -87,7 +124,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="row" id="mars">
+		<div class="row  padding-planets" id="mars">
 			<div class="col-md-6">
 				<h2 style="color: ivory;">Mars</h2>
 				<p style="color: ivory;">Equatorial Diameter:	6,792 km<br>
@@ -105,7 +142,7 @@
 				<img src="images/Mars.jpg" class="img-responsive" style="width:100%" alt="Mars">
 			</div>
 		</div>
-		<div class="row" id="jupiter">
+		<div class="row  padding-planets" id="jupiter">
 			<div class="col-md-6">
 				<img src="images/jupiter.jpg" class="img-responsive" style="width:100%" alt="Jupiter">
 			</div>
@@ -125,7 +162,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="row" id="saturn">
+		<div class="row  padding-planets" id="saturn">
 			<div class="col-md-6">
 				<h2 style="color: ivory;">Saturn</h2>
 				<p style="color: ivory;">Equatorial Diameter:	120,536 km<br>
@@ -144,7 +181,7 @@
 				<img src="images/saturn.jpg" class="img-responsive" style="width:100%" alt="Saturn">
 			</div>
 		</div>
-		<div class="row" id="uranus">
+		<div class="row  padding-planets" id="uranus">
 			<div class="col-md-6">
 				<img src="images/uranus.jpg" class="img-responsive" style="width:100%" alt="Uranus">
 			</div>
@@ -163,7 +200,7 @@
 				</p>
 			</div>
 		</div>
-		<div class="row" id="neptune">
+		<div class="row  padding-planets" id="neptune">
 			<div class="col-md-6">
 				<h2 style="color: ivory;">Neptune</h2>
 				<p style="color: ivory;">Equatorial Diameter:	49,528 km<br>
