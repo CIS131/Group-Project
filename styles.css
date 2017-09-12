@@ -1,0 +1,79 @@
+
+/* cover */
+html, body {
+    height: 100%;
+}
+.cover {
+    background: url("Pictures/page1Background.jpg") no-repeat;
+    background-size: cover;
+    color: white;
+    text-shadow: 0 0 10px darkmagenta;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.cover-caption {
+    width: 100%;
+}
+
+/* container */
+body {
+    background: black;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h4 {
+    text-shadow: 0 0 5px darkmagenta;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    color: slategrey;
+}
+
+
+.kids, .links, .video, .theories, .adspace {
+    height: 300px;
+    border: 2px solid grey;
+    border-style: outset;
+}
+
+.video {
+    margin-top: 10px;
+}
+
+.kids {
+    background: url("Pictures/kidsBackground.jpg") no-repeat;
+    margin-top: 10px;
+    box-shadow: 2px 2px 10px grey;
+}
+
+.info {
+    background: black;
+    margin-top: 10px;
+}
+
+.links {
+    box-shadow: -2px 2px 10px grey;
+    background: url("Pictures/spaceBackground.jpg") no-repeat;
+    background-size: cover;
+}
+
+.theories {
+    box-shadow: 2px -2px 10px grey;
+    background: url("Pictures/universe.jpg") no-repeat;
+    background-size: cover;
+}
+
+.adspace {
+    box-shadow: -2px -2px 10px grey;
+}
+
+.quote {
+    text-shadow: 0 0 5px blue;
+    font-size: 24px;
+    color: grey;
+    
+}
