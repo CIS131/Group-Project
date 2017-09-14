@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<!--
+		Developer: Matthew Glenn
+		Date: 9/11/17
+		Assignment: team case study - planets
+	-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+		.padding-planets {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+	</style>
+  </head>
+  <body style="background-color: black;">
+    <div class="container-fluid text-center">
+			<h1 style="color: ivory; font-size:500%;">Our Solar System</h1>
+			<img src="images/solar_system.jpg" class="img" alt="Solar System" usemap="#planetmap">
+			<map name="planetmap">
+			  <area shape="circle" coords="825,580,12" href="#mercury" alt="Mercury">
+			  <area shape="circle" coords="898,583,42" href="#venus" alt="Venus">
+			  <area shape="circle" coords="995,583,33" href="#earth" alt="Earth">
+			  <area shape="circle" coords="1063,583,18" href="#mars" alt="Mars">
+			  <area shape="circle" coords="1191,583,97" href="#jupiter" alt="Jupiter">
+			  <area shape="circle" coords="1420,593,74" href="#saturn" alt="Saturn">
+			  <area shape="circle" coords="1591,596,31" href="#uranus" alt="Uranus">
+			  <area shape="circle" coords="1685,596,41" href="#neptune" alt="Neptune">
+			</map>
+	</div>
+	<!-- Navbar -->
+	       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav-main">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="GroupSpaceProject/index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="Space.html">Space</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galaxies.html">Galaxies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Frequencies/frequencies.html">Sounds/Frequencies</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="planets.html">Our Planets</a>
+                    </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="project131/computers.html">Computers in Space</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+					<p><font color="White">We would like to know what your favorite planet is, Press go to answer &nbsp; &nbsp;   </font></p>
+					<input type="button" id="go" class="btn btn-success btn-md" value="GO"/>
+                </form>
+            </div>
+        </nav>
+	<!-- Article Body -->
+	<div class="container text-center padding-planets">
+		<h2 style="color: ivory;">How much would you weigh on another planet?</h2>
+        <form class="form-inline" name="myform" action="" method="get">
+            <div class="form-group">
+                <label for="weight">Weight:</label>
+                <input type="text" class="form-control" name="inputbox" id="weight">
+            </div>
+            <input type="button" value="Click" onclick="gravity.forEach(setWeight)" class="btn btn-default">
+        </form> 
+		    <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+            <p id="error"></p>
+	</div>
+	<div class="container">
+		<div class="row  padding-planets" id="mercury">
+			<div class="col-md-6">
+				<img src="images/mercury.jpg" class="img-responsive" style="width:100%" alt="Mercury">
+			</div>
+			<div class="col-md-6">
+				<h2 style="color: ivory;">Mercury</h2>
+				<p style="color: ivory;">Diameter:	4,879 km<br>
+					Mass:	3.30 x 10^23 kg (5.5% Earth)<br>
+					Moons:	None<br>
+					Orbit Distance:	57,909,227 km (0.39 AU)<br>
+					Orbit Period:	88 days<br>
+					Surface Temperature:	-173 to 427°C<br>
+					First Record:	14th century BC<br>
+					Recorded By:	Assyrian astronomers<br>
+				</p>
+			</div>
+		</div>
+		<div class="row  padding-planets" id="venus">
+			<div class="col-md-6">
+				<h2 style="color: ivory;">Venus</h2>
+				<p style="color: ivory;">Diameter:	12,104 km<br>
+					Mass:	4.87 x 10^24 kg (81.5% Earth)<br>
+					Moons:	None<br>
+					Orbit Distance:	108,209,475 km (0.73 AU)<br>
+					Orbit Period:	225 days<br>
+					Surface Temperature:	462 °C<br>
+					First Record:	17th century BC<br>
+					Recorded By:	Babylonian astronomers<br>
+				</p>
+			</div>
+			<div class="col-md-6">
+				<img src="images/venus.jpg" class="img-responsive" style="width:100%" alt="Venus">
+			</div>
+		</div>
+		<div class="row  padding-planets" id="earth">
+			<div class="col-md-6">
+				<img src="images/earth.png" class="img-responsive" style="width:100%" alt="Earth">
+			</div>
+			<div class="col-md-6">
+				<h2 style="color: ivory;">Earth</h2>
+				<p style="color: ivory;">Equatorial Diameter:	12,756 km<br>
+					Polar Diameter:	12,714 km<br>
+					Mass:	5.97 x 10^24 kg<br>
+					Moons:	1 (The Moon)<br>
+					Orbit Distance:	149,598,262 km (1 AU)<br>
+					Orbit Period:	365.24 days<br>
+					Surface Temperature:	-88 to 58°C<br>
+				</p>
+			</div>
+		</div>
+		<div class="row  padding-planets" id="mars">
+			<div class="col-md-6">
+				<h2 style="color: ivory;">Mars</h2>
+				<p style="color: ivory;">Equatorial Diameter:	6,792 km<br>
+					Polar Diameter:	6,752 km<br>
+					Mass:	6.42 x 10^23 kg (10.7% Earth)<br>
+					Moons:	2 (Phobos & Deimos)<br>
+					Orbit Distance:	227,943,824 km (1.52 AU)<br>
+					Orbit Period:	687 days (1.9 years)<br>
+					Surface Temperature:	-153 to 20 °C<br>
+					First Record:	2nd millennium BC<br>
+					Recorded By:	Egyptian astronomers<br>
+				</p>
+			</div>
+			<div class="col-md-6">
+				<img src="images/Mars.jpg" class="img-responsive" style="width:100%" alt="Mars">
+			</div>
+		</div>
+		<div class="row  padding-planets" id="jupiter">
+			<div class="col-md-6">
+				<img src="images/jupiter.jpg" class="img-responsive" style="width:100%" alt="Jupiter">
+			</div>
+			<div class="col-md-6">
+				<h2 style="color: ivory;">Jupiter</h2>
+				<p style="color: ivory;">Equatorial Diameter:	142,984 km<br>
+					Polar Diameter:	133,709 km<br>
+					Mass:	1.90 × 10^27 kg (318 Earths)<br>
+					Moons:	67 (Io, Europa, Ganymede & Callisto)<br>
+					Rings:	4<br>
+					Orbit Distance:	778,340,821 km (5.20 AU)<br>
+					Orbit Period:	4,333 days (11.9 years)<br>
+					Effective Temperature:	-148 °C<br>
+					First Record:	7th or 8th century BC<br>
+					Recorded By:	Babylonian astronomers<br>
+
+				</p>
+			</div>
+		</div>
+		<div class="row  padding-planets" id="saturn">
+			<div class="col-md-6">
+				<h2 style="color: ivory;">Saturn</h2>
+				<p style="color: ivory;">Equatorial Diameter:	120,536 km<br>
+					Polar Diameter:	108,728 km<br>
+					Mass:	5.68 × 10^26 kg (95 Earths)<br>
+					Moons:	62 (Titan, Enceladus, Iapetus & Rhea)<br>
+					Rings:	30+ (7 Groups)<br>
+					Orbit Distance:	1,426,666,422 km (9.54 AU)<br>
+					Orbit Period:	10,756 days (29.5 years)<br>
+					Effective Temperature:	-178 °C<br>
+					First Record:	8th century BC<br>
+					Recorded By:	Assyrians<br>
+				</p>
+			</div>
+			<div class="col-md-6">
+				<img src="images/saturn.jpg" class="img-responsive" style="width:100%" alt="Saturn">
+			</div>
+		</div>
+		<div class="row  padding-planets" id="uranus">
+			<div class="col-md-6">
+				<img src="images/uranus.jpg" class="img-responsive" style="width:100%" alt="Uranus">
+			</div>
+			<div class="col-md-6">
+				<h2 style="color: ivory;">Uranus</h2>
+				<p style="color: ivory;">Equatorial Diameter:	51,118 km<br>
+					Polar Diameter:	49,946 km<br>
+					Mass:	8.68 × 10^25 kg (15 Earths)<br>
+					Moons:	27 (Miranda, Titania, Ariel, Umbriel & Oberon)<br>
+					Rings:	13<br>
+					Orbit Distance:	2,870,658,186 km (19.19 AU)<br>
+					Orbit Period:	30,687 days (84.0 years)<br>
+					Effective Temperature:	-216 °C<br>
+					Discovery Date:	March 13th 1781<br>
+					Discovered By:	William Herschel<br>
+				</p>
+			</div>
+		</div>
+		<div class="row  padding-planets" id="neptune">
+			<div class="col-md-6">
+				<h2 style="color: ivory;">Neptune</h2>
+				<p style="color: ivory;">Equatorial Diameter:	49,528 km<br>
+					Polar Diameter:	48,682 km<br>
+					Mass:	1.02 × 10^26 kg (17 Earths)<br>
+					Moons:	14 (Triton)<br>
+					Rings:	5<br>
+					Orbit Distance:	4,498,396,441 km (30.10 AU)<br>
+					Orbit Period:	60,190 days (164.8 years)<br>
+					Effective Temperature:	-214 °C<br>
+					Discovery Date:	September 23rd 1846<br>
+					Discovered By:	Urbain Le Verrier & Johann Galle<br>
+				</p>
+			</div>
+			<div class="col-md-6">
+				<img src="images/neptune.jpg" class="img-responsive" style="width:100%" alt="Neptune">
+			</div>
+		</div>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<!-- favorite planet array -->
+	<script src="planets.js" type="text/javascript"></script>
+  </body>
+</html>
